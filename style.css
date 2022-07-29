@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: #414247; */
+}
+
+.card{
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.card .header{
+    display: flex;
+    align-items: center;
+}
+
+.card .header .img{
+    height: 70px;
+    width: 70px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .details{
+    margin-left: 20px;
+}
+
+.details span{
+    background: #d9d9d9;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.details .name{
+    width: 100px;
+    height: 15px;
+}
+
+.details .about{
+    width: 150px;
+    height: 15px;
+    margin-top: 10px;
+}
+
+.card .content{
+    margin: 25px 0;
+}
+
+.content .line{
+    background: #d9d9d9;
+    height: 13px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.content .line-1{
+    width: calc(100% - 15%);
+}
+
+.content .line-3{
+    width: calc(100% - 40%);
+}
+
+.card .btns{
+    display: flex;
+}
+
+.card .btns .btn{
+    height: 45px;
+    width: 100%;
+    background: #d9d9d9;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btns .btn-1{
+    margin-right: 8px;
+}
+
+.btns .btn-2{
+    margin-right: 8px;
+}
+
+.card .header .img::before,
+.details span::before,
+.content .line::before,
+.btns .btn::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #d9d9d9 0%, rgba(0,0,0,0.05) 20%, #d9d9d9 40%, #d9d9d9 100%);
+    background-size: 450px 400px;
+    background-repeat: no-repeat;
+    animation: shimmer 1s linear infinite;
+}
+
+.details span::before,
+.btns .btn::before{
+    animation-delay: 0.2s;
+}
+
+@keyframes shimmer {
+    0%{
+        background-position: -450px 0;
+    }
+    100%{
+        background-position: 450px 0;
+    }
+}
